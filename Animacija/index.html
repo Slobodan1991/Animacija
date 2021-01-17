@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+body {
+    width: 600px;
+    height: 492px;
+    margin: 130px auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #050210;
+}
+.circle {
+position: relative;
+width: 300px;
+height: 300px;
+background: linear-gradient( #fb5dad, #55fb9f, #b97aff);
+border-radius: 50%;
+animation: my-animation 1s  linear infinite;
+
+}
+@keyframes my-animation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+    
+}
+.circle:after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    border-radius: 50%;
+    background-color: black;
+
+}
+
+.circle span {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( #fb5dad, #55fb9f, #b97aff);
+    border-radius: 50%;
+
+}
+.circle span:nth-child(1) {
+    filter: blur(0px);
+}
+.circle span:nth-child(2) {
+    filter: blur(5px);
+}
+.circle span:nth-child(3) {
+    filter: blur(20px) saturate(45%);
+}
+.circle span:nth-child(4) {
+    filter: blur(55px) saturate(45%);
+}
+.krug {
+    position: absolute;
+    margin: 0;
+    border-radius: 50%;
+    background-color:#050210 ;
+    animation: circel1 2s ease-out infinite;
+   
+  }
+@keyframes circel1 {
+    0% {
+     width: 0px;
+     height: 0px;
+    }
+    100% {
+        width: 260px;
+        height: 260px;
+       
+    }
+}
+</style>
+<body>
+    <div class="circle">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+       
+        </div>
+
+        <div class="krug"></div>
+        
+    
+</body>
+</html>
